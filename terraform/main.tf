@@ -13,13 +13,13 @@ provider "aws" {
 }
 
 resource "aws_sqs_queue" "product_events_dlq" {
-  name                      = "${var.name_prefix}-product-events-dlq-terraform"
+  name                      = "${var.name_prefix}-product-events-dlq-terraform-lab11"
   message_retention_seconds = 1209600 # 14 days
   tags                      = var.tags
 }
 
 resource "aws_sqs_queue" "product_events" {
-  name                       = "${var.name_prefix}-product-events-terraform"
+  name                       = "${var.name_prefix}-product-events-terraform-lab11"
   visibility_timeout_seconds = 60
   message_retention_seconds  = 345600 # 4 days
   receive_wait_time_seconds  = 20     # long polling (matches app default)
