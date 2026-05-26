@@ -24,6 +24,9 @@ jobs:
           java-version: '21'
           cache: maven
 
+      - name: Install Maven
+        run: sudo apt-get update && sudo apt-get install -y maven
+
       - name: Validate POM
         run: mvn -B -q validate
 
