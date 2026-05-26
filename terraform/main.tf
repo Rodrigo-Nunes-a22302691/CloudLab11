@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  # Region from AWS_REGION or provider config; override with -var or TF_VAR_ as needed. mudei
+  # Region from AWS_REGION or provider config; override with -var or TF_VAR_ as needed. desmudei
 }
 
 resource "aws_sqs_queue" "product_events_dlq" {
