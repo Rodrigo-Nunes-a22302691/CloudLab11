@@ -688,6 +688,19 @@ Trigger em:
 
 ---
 
+### 8. Deploy Workflow (deploy.yml)
+
+- Workflow responsável por simular o processo de Continuous Deployment (CD)
+- Executa automaticamente sempre que há um push para a branch main
+- O deploy é dividido em duas fases: build e deploy
+- O job de deploy depende do sucesso do build (needs: build)
+- O deploy está associado ao GitHub Environment production
+
+Trigger em:
+- push para `main`, precisa ser aprovado manualmente por um reviewer
+
+---
+
 ## GitHub Secrets Necessários
 
 - AWS_ROLE_TO_ASSUME -> Role IAM para AWS OIDC
